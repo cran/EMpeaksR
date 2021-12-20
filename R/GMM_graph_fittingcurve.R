@@ -52,14 +52,14 @@ show_gmm_curve <- function(spect_em_gmm_res, x, y, mix_ratio_init, mu_init, sigm
   }
 
   Est_spect_G    <- colSums(esGMM_c)
-  Energy_G       <- x
+  x_G            <- x
 
   for(k in 1:K) {
-    plot(esGMM_c[k,]~Energy_G, pch=19,  xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "black", las = 1, typ = "l", lwd = 2, cex = 0.75, lty = 3, ylab = "Frequency", xlab = "x", main = "")
+    plot(esGMM_c[k,]~x_G, pch=19,  xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "black", las = 1, typ = "l", lwd = 2, cex = 0.75, lty = 3, ylab = "Frequency", xlab = "x", main = "")
     par(new = TRUE)
   }
 
-  plot(Est_spect_G~Energy_G, pch=19,  xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "tomato3", las = 1, typ = "l", lwd = 2, cex = 0.75, ylab = "Frequency", xlab = "x", main = "Estimted GMM")
+  plot(Est_spect_G~x_G, pch=19,  xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "tomato3", las = 1, typ = "l", lwd = 2, cex = 0.75, ylab = "Frequency", xlab = "x", main = "Estimted GMM")
   par(new = TRUE)
   plot(y~Energy_G, pch=21,  xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "black", las = 1, typ = "p", lwd = 2, cex = 0.75, ylab = "Frequency", xlab = "x")
 
