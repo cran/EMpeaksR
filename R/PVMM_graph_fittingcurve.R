@@ -1,4 +1,3 @@
-beta
 show_pvmm_curve <- function(spect_em_pvmm_res, x, y, mix_ratio_init, mu_init, sigma_init, eta_init) {
 
   #trancated Pseudo-Voigt
