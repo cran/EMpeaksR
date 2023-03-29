@@ -57,7 +57,7 @@ sigma_init      <- c(2, 5, 4)
 
 #Coducting calculation
 SP_EM_G_res <- spect_em_gmm(x, y, mu = mu_init, sigma = sigma_init, mix_ratio = mix_ratio_init,
-                            conv.cri = 1e-8, maxit = 100000)
+                            conv.cri = 1e-2, maxit = 2000)
 
 #Plot fitting curve and trace plot of parameters
 show_gmm_curve(SP_EM_G_res, x, y, mix_ratio_init, mu_init, sigma_init)

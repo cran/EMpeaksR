@@ -64,7 +64,7 @@ gam_init        <- c(2, 5, 4)
 
 #Coducting calculation
 SP_ECM_L_res <- spect_em_lmm(x, y, mu = mu_init, gam = gam_init, mix_ratio = mix_ratio_init,
-                             conv.cri = 1e-6, maxit = 100000)
+                             conv.cri = 1e-2, maxit = 2000)
 
 #Plot fitting curve and trace plot of parameters
 show_lmm_curve(SP_ECM_L_res, x, y, mix_ratio_init, mu_init, gam_init)

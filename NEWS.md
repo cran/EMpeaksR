@@ -1,3 +1,7 @@
+# EMpeaksR 0.3.1
+We have fixed a bug in that unintended plots were output in show_pvmm_lback_curve().
+
+
 # EMpeaksR 0.3.0
 In version 0.3.0, the pseudo-Voigt mixture model with a linear background model is available for peak fitting. This model enables background subtraction and peak fitting in the one-shot calculation. As the linear background is generally used in spectroscopy, the applicability of EMpeaksR packages is further expanded.
 

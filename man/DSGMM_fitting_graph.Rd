@@ -101,8 +101,8 @@ SP_ECM_DSG_res <- spect_em_dsgmm(x = x,
                                  alpha = alpha_init,
                                  eta = eta_init,
                                  mix_ratio = mix_ratio_init,
-                                 conv.cri = 1e-6,
-                                 maxit = 100)
+                                 conv.cri = 1e-2,
+                                 maxit = 2000)
 
 #Plot fitting curve and trace plot of parameters
 show_dsgmm_curve(SP_ECM_DSG_res,

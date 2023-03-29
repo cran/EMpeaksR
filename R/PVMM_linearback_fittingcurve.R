@@ -25,14 +25,6 @@ show_pvmm_lback_curve <-function(spect_em_pvmm_lback_res, x, y, mix_ratio_init, 
   x_N   <- x[length(x)]
 
   #Calculating  fitting curve
-  for(i in 1:M) {
-    plot(spect_em_pvmm_lback_res$W_K[i,]~x, main = (paste0("comp", i)), xlim = c(min(x), max(x)), ylab = "intensity", ylim = c(0, max(y)), pch = 19, cex = 0.25)
-  }
-
-  plot(colSums(spect_em_pvmm_lback_res$W_K[1:K,])~x, main = "comp_peaks", xlim = c(min(x), max(x)), ylab = "intensity", ylim = c(0, max(y)),  pch = 19, cex = 0.25)
-  plot(colSums(spect_em_pvmm_lback_res$W_K[(K+1):M,])~x, main = "comp_background", xlim = c(min(x), max(x)), ylab = "intensity", ylim = c(0, max(y)),  pch = 19, cex = 0.25)
-
-
   Es_PVMM   <- matrix(NA, ncol = K, nrow = length(x))
   for(i in 1:K) {
     Es_PVMM[,i] <- es_mix_ratio_PV[i] * truncated_pv(x = x, mu = es_mu_PV[i], sigma = es_sigma_PV[i], eta = es_eta_PV[i])
@@ -62,6 +54,7 @@ show_pvmm_lback_curve <-function(spect_em_pvmm_lback_res, x, y, mix_ratio_init, 
 
   scale_cont   <-  sum(y)
 
+  #Fitting curve
   plot(y ~ x, las = 1, typ = "p", lwd = 2, cex = 0.75, lty = 3, ylab = "Frequency", xlab = "x", main = "", xlim = c(min(x), max(x)), ylim = c(0, max(y)), col = "black")
   par(new = TRUE)
 

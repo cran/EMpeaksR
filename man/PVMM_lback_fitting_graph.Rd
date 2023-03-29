@@ -6,8 +6,7 @@
 
 \usage{
 show_pvmm_lback_curve(spect_em_pvmm_lback_res,
-                      x,
-                      y,
+                      x, y,
                       mix_ratio_init,
                       mu_init,
                       sigma_init,
@@ -40,12 +39,13 @@ Perform a visualization of fitting curve estimated by pseudo-Voigt mixture model
 Show the fitting curve and variation of the parameters.
 
 }
+
 \references{
 Matsumura, T., Nagamura, N., Akaho, S., Nagata, K., & Ando, Y. (2019). Spectrum adapted expectation-maximization algorithm for high-throughput peak shift analysis. Science and technology of advanced materials, 20(1), 733-745.
 
 Matsumura, T., Nagamura, N., Akaho, S., Nagata, K., & Ando, Y. (2021). Spectrum adapted expectation-conditional maximization algorithm for extending high–throughput peak separation method in XPS analysis. Science and Technology of Advanced Materials: Methods, 1(1), 45-55.
 
-Matsumura, T., Nagamura, N., Akaho, S., Nagata, K., & Ando, Y. (2023). High-throughput XPS spectrum modeling with autonomous background subtraction for 3 d 5/2 peak mapping of SnS. Science and Technology of Advanced Materials: Methods, (2023), 2159753.
+Matsumura, T., Nagamura, N., Akaho, S., Nagata, K., & Ando, Y. (2023). High-throughput XPS spectrum modeling with autonomous background subtraction for 3 d 5/2 peak mapping of SnS. Science and Technology of Advanced Materials: Methods, 3(1), 2159753.
 }
 
 \examples{
@@ -96,8 +96,8 @@ SP_ECM_PV_LBACK_res <- spect_em_pvmm_lback(x = x,
                                            mix_ratio = mix_ratio_init,
                                            x_lower = min(x),
                                            x_upper = max(x),
-                                           conv.cri = 1e-3,
-                                           maxit = 3000)
+                                           conv.cri = 1e-2,
+                                           maxit = 2000)
 
 #Plot fitting curve and trace plot of parameters
 show_pvmm_lback_curve(spect_em_pvmm_lback_res = SP_ECM_PV_LBACK_res,

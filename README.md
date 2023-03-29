@@ -9,6 +9,9 @@ The EMpeaks can support the investigation of peak fitting with two advantages: (
 
 In version 0.2.0,  (1) Lorentz mixture model, (2) Pseudo-Voigt mixture model, and (3) Doniach-Sunjic-Gauss mixture model are available for peak fitting. As these models are generally used in spectroscopy, applicability of the EMpeaksR package is expanded.
 
+In version 0.3.0, the pseudo-Voigt mixture model with a linear background model is available for peak fitting. This model enables background subtraction and peak fitting in the one-shot calculation. As the linear background is generally used in spectroscopy, the applicability of EMpeaksR packages is expanded.
+
+In version 0.3.1, we have fixed a bug in that unintended plots were output in show_pvmm_lback_curve(). 
 
 ## Installation
 

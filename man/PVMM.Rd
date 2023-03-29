@@ -95,8 +95,8 @@ SP_ECM_PV_res <- spect_em_pvmm(x = x,
                                sigma = sigma_init,
                                eta = eta_init,
                                mix_ratio = mix_ratio_init,
-                               conv.cri = 1e-3,
-                               maxit = 3000)
+                               conv.cri = 1e-2,
+                               maxit = 2000)
 
 #Plot fitting curve and trace plot of parameters
 show_pvmm_curve(SP_ECM_PV_res, x, y, mix_ratio_init, mu_init, sigma_init, eta_init)
